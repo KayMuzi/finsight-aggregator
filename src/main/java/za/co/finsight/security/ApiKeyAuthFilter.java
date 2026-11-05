@@ -9,30 +9,34 @@ import java.nio.charset.StandardCharsets;
 import java.security.MessageDigest;
 import java.util.List;
 import org.springframework.http.MediaType;
-import org.springframework.stereotype.Component;
 import org.springframework.web.filter.OncePerRequestFilter;
 import za.co.finsight.config.FinsightProperties;
 
-/**
- * Service-level authentication via a shared API key.
- */
-@Component
 public class ApiKeyAuthFilter extends OncePerRequestFilter {
 
     static final String HEADER = "X-API-Key";
 
     private static final List<String> PUBLIC_PATHS =
-            List.of("/actuator/health", "/v3/api-docs", "/swagger-ui");
+            List.of(
+                    "/actuator/health",
+                    "/v3/api-docs",
+                    "/swagger-ui");
 
     private final byte[] expectedKey;
 
     public ApiKeyAuthFilter(FinsightProperties properties) {
-        this.expectedKey =                properties.security().apiKey().getBytes(StandardCharsets.UTF_8);
+        this.expectedKey =
+                properties.security()
+                        .apiKey()
+                        .getBytes(StandardCharsets.UTF_8);
     }
 
     @Override
     protected boolean shouldNotFilter(HttpServletRequest request) {
-        return true;
+        String uri = request.getRequestURI();
+
+        return PUBLIC_PATHS.stream()
+                .anyMatch(uri::startsWith);
     }
 
     @Override
@@ -42,25 +46,27 @@ public class ApiKeyAuthFilter extends OncePerRequestFilter {
             FilterChain chain)
             throws ServletException, IOException {
 
-        // Authentication disabled for testing
 
-        chain.doFilter(request, response);
-
-        /*
         String provided = request.getHeader(HEADER);
 
-        if (provided != null &&
-                MessageDigest.isEqual(
-                        provided.getBytes(StandardCharsets.UTF_8),
-                        expectedKey)) {
+        if (provided != null
+                && MessageDigest.isEqual(
+                provided.getBytes(StandardCharsets.UTF_8),
+                expectedKey)) {
+
             chain.doFilter(request, response);
             return;
         }
 
         response.setStatus(HttpServletResponse.SC_UNAUTHORIZED);
         response.setContentType(MediaType.APPLICATION_PROBLEM_JSON_VALUE);
-        response.getWriter().write(
-                "{\"type\":\"about:blank\",\"title\":\"Unauthorized\",\"status\":401,\"detail\":\"Missing or invalid API key\"}");
-        */
+        response.getWriter().write("""
+            {
+              "type":"about:blank",
+              "title":"Unauthorized",
+              "status":401,
+              "detail":"Missing or invalid API key"
+            }
+            """);
     }
 }

@@ -52,7 +52,7 @@ class SyncServiceTest {
         when(duplicates.findOriginal(any())).thenReturn(Optional.empty());
 
         FinsightProperties props = new FinsightProperties(
-                new FinsightProperties.Security("test-api-key-0123456789"),
+                new FinsightProperties.Security("MySecretApiKey12345"),
                 "Africa/Johannesburg",
                 new FinsightProperties.Budget(80),
                 new FinsightProperties.Mock(List.of()));

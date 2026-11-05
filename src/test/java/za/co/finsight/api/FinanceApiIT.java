@@ -28,10 +28,10 @@ import org.springframework.test.web.servlet.ResultActions;
 @SpringBootTest
 @AutoConfigureMockMvc
 @ActiveProfiles("test")
-class FinanceApiIT {
+public class FinanceApiIT {
 
     private static final String KEY = "X-API-Key";
-    private static final String API_KEY = "test-api-key-0123456789";
+    private static final String API_KEY = "MySecretApiKey12345";
     private static final String CUST = "CUST-1001";
     private static final String OCT_FROM = "2026-10-01T00:00:00Z";
     private static final String OCT_TO = "2026-11-01T00:00:00Z";
