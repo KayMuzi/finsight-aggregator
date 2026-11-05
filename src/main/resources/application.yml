@@ -1,0 +1,56 @@
+spring:
+  application:
+    name: finsight-aggregator
+  datasource:
+    url: jdbc:mysql://localhost:3306/finsight
+    username: root
+    password: Toothpaste01
+  jpa:
+    open-in-view: false
+    hibernate:
+      ddl-auto: validate
+
+    properties:
+      hibernate:
+        jdbc:
+          time_zone: UTC
+  flyway:
+    enabled: true
+  data:
+    web:
+      pageable:
+        max-page-size: 100
+
+server:
+  port: ${SERVER_PORT:8080}
+  shutdown: graceful
+  error:
+    include-message: never
+    include-stacktrace: never
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info
+  endpoint:
+    health:
+      probes:
+        enabled: true
+
+springdoc:
+  swagger-ui:
+    enabled: ${SWAGGER_UI_ENABLED:true}
+
+finsight:
+  security:
+    # Required. Startup fails without a key of at least 16 characters.
+    api-key: MySecretApiKey12345
+  # Month boundaries and daily aggregates are evaluated in this zone (South Africa Standard Time).
+  timezone: Africa/Johannesburg
+  budget:
+    # Category spend at or above this share of its limit is reported as NEAR_LIMIT.
+    near-limit-percent: 80
+  mock:
+    # Simulated connector outages, e.g. - { customerId: CUST-2002, source: WALLET }
+    outages: []

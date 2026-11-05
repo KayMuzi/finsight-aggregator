@@ -1,0 +1,32 @@
+services:
+  mysql:
+    image: mysql:8.0
+
+    environment:
+      MYSQL_DATABASE: finsight
+      MYSQL_ROOT_PASSWORD: Toothpaste01
+
+    ports:
+      - "3307:3306"
+
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-pToothpaste01"]
+      interval: 10s
+      timeout: 5s
+      retries: 20
+
+  finsight:
+    build: .
+
+    depends_on:
+      mysql:
+        condition: service_healthy
+
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:mysql://mysql:3306/finsight
+      SPRING_DATASOURCE_USERNAME: root
+      SPRING_DATASOURCE_PASSWORD: Toothpaste01
+      FINSIGHT_API_KEY: MySecretApiKey12345
+
+    ports:
+      - "8081:8080"

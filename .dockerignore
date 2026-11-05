@@ -1,0 +1,5 @@
+!target/finsight-aggregator.jar
+.git/
+.idea/
+*.iml
+.env

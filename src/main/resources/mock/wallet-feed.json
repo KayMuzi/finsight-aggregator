@@ -1,0 +1,8 @@
+[
+  {"reference": "WLT-0001", "customerId": "CUST-1001", "eventType": "WALLET_TOPUP", "createdAt": "2026-09-30T10:00:00Z", "signedAmount": "-500.00", "currency": "ZAR", "counterparty": "ACC-0001"},
+  {"reference": "WLT-0002", "customerId": "CUST-1001", "eventType": "P2P_SENT", "createdAt": "2026-10-04T13:00:00Z", "signedAmount": "-150.00", "currency": "ZAR", "counterparty": "Thabo M"},
+  {"reference": "WLT-0003", "customerId": "CUST-1001", "eventType": "P2P_RECEIVED", "createdAt": "2026-10-06T10:00:00Z", "signedAmount": "400.00", "currency": "ZAR", "counterparty": "Nomsa K"},
+  {"reference": "WLT-0004", "customerId": "CUST-1001", "eventType": "MERCHANT_PAYMENT", "createdAt": "2026-10-12T08:30:00Z", "signedAmount": "-45.00", "currency": "ZAR", "counterparty": "Spaza Shop Kwa"},
+  {"reference": "WLT-0005", "customerId": "CUST-1001", "eventType": "MERCHANT_PAYMENT", "createdAt": "2026-10-13T12:40:00Z", "signedAmount": "-120.00", "currency": "ZAR", "counterparty": "Steers Sandton"},
+  {"reference": "WLT-0006", "customerId": "CUST-1001", "eventType": "CASHOUT", "createdAt": "2026-10-14T16:00:00Z", "signedAmount": "-200.00", "currency": "ZAR", "counterparty": "ATM"}
+]

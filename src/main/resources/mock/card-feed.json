@@ -1,0 +1,13 @@
+[
+  {"authorisationId": "CRD-0001", "customerId": "CUST-1001", "authorisedAt": "2026-10-03T14:01:00+02:00", "amountMinor": -35000, "currency": "ZAR", "merchant": {"name": "Woolworths Food", "mcc": "5411"}},
+  {"authorisationId": "CRD-0002", "customerId": "CUST-1001", "authorisedAt": "2026-09-20T11:00:00+02:00", "amountMinor": -129900, "currency": "ZAR", "merchant": {"name": "Takealot", "mcc": "5311"}},
+  {"authorisationId": "CRD-0003", "customerId": "CUST-1001", "authorisedAt": "2026-09-22T16:45:00+02:00", "amountMinor": -45620, "currency": "ZAR", "merchant": {"name": "Clicks Pharmacy", "mcc": "5912"}},
+  {"authorisationId": "CRD-0004", "customerId": "CUST-1001", "authorisedAt": "2026-09-27T10:00:00+02:00", "amountMinor": 45000, "currency": "ZAR", "merchant": {"name": "Takealot Refund", "mcc": "5311"}},
+  {"authorisationId": "CRD-0005", "customerId": "CUST-1001", "authorisedAt": "2026-09-29T07:30:00+02:00", "amountMinor": -80000, "currency": "ZAR", "merchant": {"name": "Shell Sandton", "mcc": "5541"}},
+  {"authorisationId": "CRD-0006", "customerId": "CUST-1001", "authorisedAt": "2026-10-02T03:00:00+02:00", "amountMinor": -19900, "currency": "ZAR", "merchant": {"name": "Netflix", "mcc": "4899"}},
+  {"authorisationId": "CRD-0007", "customerId": "CUST-1001", "authorisedAt": "2026-10-04T19:30:00+02:00", "amountMinor": -28950, "currency": "ZAR", "merchant": {"name": "Uber Eats", "mcc": "5812"}},
+  {"authorisationId": "CRD-0008", "customerId": "CUST-1001", "authorisedAt": "2026-10-09T18:00:00+02:00", "amountMinor": -9500, "currency": "ZAR", "merchant": {"name": "Bolt", "mcc": "4121"}},
+  {"authorisationId": "CRD-0009", "customerId": "CUST-1001", "authorisedAt": "2026-10-10T20:10:00+02:00", "amountMinor": -21000, "currency": "ZAR", "merchant": {"name": "Mr D Food", "mcc": "5812"}},
+  {"authorisationId": "CRD-0010", "customerId": "CUST-1001", "authorisedAt": "2026-10-11T10:00:00+02:00", "amountMinor": -25000, "currency": "ZAR", "merchant": {"name": "Beauty Salon Sandton", "mcc": "7230"}},
+  {"authorisationId": "CRD-0011", "customerId": "CUST-1001", "authorisedAt": "2026-09-14T19:30:00+02:00", "amountMinor": -18000, "currency": "ZAR", "merchant": {"name": "Ster-Kinekor Cinema", "mcc": "7832"}}
+]

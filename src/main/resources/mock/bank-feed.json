@@ -1,0 +1,20 @@
+[
+  {"transactionId": "BNK-0001", "accountNumber": "ACC-0001", "postingDate": "2026-09-01T06:00:00+02:00", "amount": "-9500.00", "currency": "ZAR", "narrative": "STANDING ORDER RENT GREENFIELD PROP", "customerId": "CUST-1001"},
+  {"transactionId": "BNK-0002", "accountNumber": "ACC-0001", "postingDate": "2026-09-02T06:00:00+02:00", "amount": "-2650.00", "currency": "ZAR", "narrative": "DISCOVERY HEALTH PREMIUM", "customerId": "CUST-1001"},
+  {"transactionId": "BNK-0003", "accountNumber": "ACC-0001", "postingDate": "2026-09-10T10:00:00+02:00", "amount": "-850.00", "currency": "ZAR", "narrative": "ESKOM PREPAID VENDING", "customerId": "CUST-1001"},
+  {"transactionId": "BNK-0004", "accountNumber": "ACC-0001", "postingDate": "2026-09-25T08:00:00+02:00", "amount": "32000.00", "currency": "ZAR", "narrative": "SALARY ACME PTY LTD", "customerId": "CUST-1001"},
+  {"transactionId": "BNK-0005", "accountNumber": "ACC-0001", "postingDate": "2026-09-28T12:00:00+02:00", "amount": "-300.00", "currency": "ZAR", "narrative": "MTN PREPAID AIRTIME", "customerId": "CUST-1001"},
+  {"transactionId": "BNK-0006", "accountNumber": "ACC-0001", "postingDate": "2026-10-01T06:00:00+02:00", "amount": "-9500.00", "currency": "ZAR", "narrative": "STANDING ORDER RENT GREENFIELD PROP", "customerId": "CUST-1001"},
+  {"transactionId": "BNK-0007", "accountNumber": "ACC-0001", "postingDate": "2026-10-01T08:00:00+02:00", "amount": "32000.00", "currency": "ZAR", "narrative": "SALARY ACME PTY LTD", "customerId": "CUST-1001"},
+  {"transactionId": "BNK-0008", "accountNumber": "ACC-0001", "postingDate": "2026-10-01T09:00:00+02:00", "amount": "-2000.00", "currency": "ZAR", "narrative": "TRANSFER TO SAVINGS ACCOUNT", "customerId": "CUST-1001"},
+  {"transactionId": "BNK-0009", "accountNumber": "ACC-0001", "postingDate": "2026-10-01T00:05:00+02:00", "amount": "-69.00", "currency": "ZAR", "narrative": "BANK SERVICE FEE", "customerId": "CUST-1001"},
+  {"transactionId": "BNK-0010", "accountNumber": "ACC-0001", "postingDate": "2026-10-02T06:00:00+02:00", "amount": "-2650.00", "currency": "ZAR", "narrative": "DISCOVERY HEALTH PREMIUM", "customerId": "CUST-1001"},
+  {"transactionId": "BNK-0011", "accountNumber": "ACC-0001", "postingDate": "2026-10-03T14:02:00+02:00", "amount": "-350.00", "currency": "ZAR", "narrative": "POS PURCHASE WOOLWORTHS FOOD SANDTON", "customerId": "CUST-1001"},
+  {"transactionId": "BNK-0012", "accountNumber": "ACC-0001", "postingDate": "2026-10-05T17:20:00+02:00", "amount": "-1180.45", "currency": "ZAR", "narrative": "POS PURCHASE CHECKERS HYPER", "customerId": "CUST-1001"},
+  {"transactionId": "BNK-0013", "accountNumber": "ACC-0001", "postingDate": "2026-10-06T09:00:00+02:00", "amount": "-1000.00", "currency": "ZAR", "narrative": "ATM CASH WITHDRAWAL", "customerId": "CUST-1001"},
+  {"transactionId": "BNK-0014", "accountNumber": "ACC-0001", "postingDate": "2026-10-07T07:45:00+02:00", "amount": "-640.00", "currency": "ZAR", "narrative": "POS PURCHASE ENGEN QUICKSHOP", "customerId": "CUST-1001"},
+  {"transactionId": "BNK-0015", "accountNumber": "ACC-0001", "postingDate": "2026-10-08T10:00:00+02:00", "amount": "-780.00", "currency": "ZAR", "narrative": "ESKOM PREPAID VENDING", "customerId": "CUST-1001"},
+  {"transactionId": "BNK-1001", "accountNumber": "ACC-0002", "postingDate": "2026-10-01T08:00:00+02:00", "amount": "15000.00", "currency": "ZAR", "narrative": "SALARY BRIGHT SOLUTIONS", "customerId": "CUST-1002"},
+  {"transactionId": "BNK-1002", "accountNumber": "ACC-0002", "postingDate": "2026-10-01T06:00:00+02:00", "amount": "-6000.00", "currency": "ZAR", "narrative": "STANDING ORDER RENT SUNNYSIDE FLATS", "customerId": "CUST-1002"},
+  {"transactionId": "BNK-1003", "accountNumber": "ACC-0002", "postingDate": "2026-10-02T18:10:00+02:00", "amount": "-1200.00", "currency": "ZAR", "narrative": "POS PURCHASE CHECKERS HYPER", "customerId": "CUST-1002"}
+]
