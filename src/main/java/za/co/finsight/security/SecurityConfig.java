@@ -26,9 +26,7 @@ public class SecurityConfig {
                         .permitAll()
                         .anyRequest()
                         .permitAll())
-                .addFilterBefore(
-                        new ApiKeyAuthFilter(properties),
-                        UsernamePasswordAuthenticationFilter.class)
+
                 .httpBasic(Customizer.withDefaults())
                 .build();
     }
