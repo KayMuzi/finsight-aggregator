@@ -39,7 +39,10 @@ The system evaluates transactions against these limits and provides budget-relat
 
 This additional functionality builds on the transaction categorisation feature by using categorised transactions to evaluate spending against the customer's budget.
 
+````
+
 How to Run and Test the API
+
 The application provides Swagger UI for interacting with and testing the REST API endpoints.
 1. Prerequisites
    Before running the application, ensure you have the following installed:
@@ -91,7 +94,7 @@ The application provides Swagger UI for interacting with and testing the REST AP
    All API endpoints require an API key, except for the health endpoint, API documentation and Swagger UI.
    Use the following header when making requests:
    X-API-Key: MySecretApiKey12345
-   If Swagger UI provides an Authorize option, enter your API key there. Otherwise, supply the header in the individual endpoint's request parameters.
+   If Swagger UI provides an Authorize option, enter your API key there.
 
 
 7. Test Transaction Aggregation
@@ -133,23 +136,52 @@ The application provides Swagger UI for interacting with and testing the REST AP
    Find:
    PUT /api/v1/customers/{customerId}/budgets/{month}
    Use the following example request body:
-````
+
    {
-   "totalLimit": 30000.00,
-   "categoryLimits": [
-   {
-   "category": "GROCERIES",
-   "amount": 5000.00
-   },
-   {
-   "category": "DINING",
-   "amount": 1500.00
-   },
-   {
-   "category": "TRANSPORT",
-   "amount": 1500.00
-   }
-   ]}
+  "totalLimit": 29000,
+  "categoryLimits": [
+    {
+      "category": "GROCERIES",
+      "amount": 5000
+    },
+    {
+      "category": "DINING",
+      "amount": 1500
+    },
+    {
+      "category": "TRANSPORT",
+      "amount": 2000
+    },
+    {
+      "category": "UTILITIES",
+      "amount": 1500
+    },
+    {
+      "category": "HEALTHCARE",
+      "amount": 3000
+    },
+    {
+      "category": "ENTERTAINMENT",
+      "amount": 1000
+    },
+    {
+      "category": "SHOPPING",
+      "amount": 1500
+    },
+    {
+      "category": "PERSONAL_CARE",
+      "amount": 800
+    },
+    {
+      "category": "FEES",
+      "amount": 200
+    },
+    {
+      "category": "HOUSING",
+      "amount": 9500
+    }
+  ]
+}
 
 
 
@@ -198,10 +230,11 @@ The application provides Swagger UI for interacting with and testing the REST AP
     Run the complete test suite:
     mvn test
     Run individual test classes:
+    
     mvn -Dtest=CategorisationEngineTest test
     mvn -Dtest=BudgetEvaluatorTest test
     mvn -Dtest=SyncServiceTest test
-    mvn -Dtest=FinanceApiIT test
+    
     These tests cover transaction categorisation, budget calculations, synchronisation failures, API authentication, duplicate detection and other application functionality.
 
 11. Verify Application Health
